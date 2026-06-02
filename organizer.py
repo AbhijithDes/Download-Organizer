@@ -25,8 +25,9 @@ for file in DOWNLOADS.iterdir():
     extension = file.suffix.lower()
 
     if extension in rules:
-
         destination_folder = DOWNLOADS / rules[extension]
+    else:
+        destination_folder = DOWNLOADS / "Miscellaneous"
 
         destination_folder.mkdir(exist_ok=True)
 
